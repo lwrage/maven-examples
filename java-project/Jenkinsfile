@@ -13,8 +13,7 @@ node{
 
       // Run the maven build
       steps {
-        sh 'cd java-project'
-        sh 'mvn clean install'
+        sh 'cd java-project && mvn clean install'
       }
  
     } // withMaven will discover the generated Maven artifacts, JUnit Surefire & FailSafe & FindBugs reports...
