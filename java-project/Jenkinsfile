@@ -12,8 +12,10 @@ node{
         mavenLocalRepo: '.repository') {
 
       // Run the maven build
-      sh 'cd java-project'
-      sh 'mvn clean install'
+      steps {
+        sh 'cd java-project'
+        sh 'mvn clean install'
+      }
  
     } // withMaven will discover the generated Maven artifacts, JUnit Surefire & FailSafe & FindBugs reports...
   }
